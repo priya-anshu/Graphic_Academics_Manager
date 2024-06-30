@@ -33,6 +33,7 @@
             android:src="@drawable/student" />
 
         <TextView
+            android:id="@+id/student_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ALPHA OMEGA"
@@ -47,6 +48,7 @@
             />
 
         <TextView
+            android:id="@+id/gmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="omega-alpha123@gmail.com"
@@ -60,9 +62,10 @@
             />
 
         <TextView
+            android:id="@+id/student_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="student ID: 23712212"
+            android:text="11111111"
 
             android:layout_marginTop="50dp"
             android:layout_marginLeft="100dp"
@@ -71,17 +74,7 @@
             android:textSize="14sp"
             android:fontFamily="sans-serif-light"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
 
-            android:layout_marginTop="130dp"
-            android:fontFamily="sans-serif-light"
-
-            android:text="23044455"
-            android:textColor="@color/white"
-            android:textSize="14sp" />
 
         <TextView
             android:layout_width="match_parent"
