@@ -59,8 +59,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    String studentName = dataSnapshot.child("studentname").getValue(String.class);
-                    String studentId = dataSnapshot.child("studentid").getValue(String.class);
+                    String studentName = dataSnapshot.child("student_name").getValue(String.class);
+                    String studentId = dataSnapshot.child("student_id").getValue(String.class);
                     String studentCourse = dataSnapshot.child("studentcourse").getValue(String.class);
                     String studentMobile = dataSnapshot.child("mobilenumber").getValue(String.class);
                     String studentAddress = dataSnapshot.child("address").getValue(String.class);

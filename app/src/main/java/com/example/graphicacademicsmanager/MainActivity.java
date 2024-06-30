@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 public class MainActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
@@ -41,20 +40,22 @@ public class MainActivity extends AppCompatActivity {
             }
 
             // Check if the entered username exists in the database
-            userRef.child(enteredUsername).addListenerForSingleValueEvent(new ValueEventListener() {
+            userRef.orderByChild("studentid").equalTo(enteredUsername).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
-                        String correctPassword = dataSnapshot.child("password").getValue(String.class);
-                        if (correctPassword != null && correctPassword.equals(enteredPassword)) {
-                            // Correct username and password
-                            Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                            // Proceed to HomeActivity or perform desired action
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            startActivity(intent);
-                        } else {
-                            // Incorrect password
-                            Toast.makeText(MainActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                        for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
+                            String correctPassword = userSnapshot.child("password").getValue(String.class);
+                            Log.d("MainActivity", "Correct Password from DB: " + correctPassword);
+                            if (correctPassword != null && correctPassword.equals(enteredPassword)) {
+                                // Correct username and password
+                                Toast.makeText(MainActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                                startActivity(intent);
+                            } else {
+                                // Incorrect password
+                                Toast.makeText(MainActivity.this, "Incorrect password", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     } else {
                         // Username not found
