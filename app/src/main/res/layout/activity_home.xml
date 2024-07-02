@@ -89,43 +89,45 @@
             android:textSize="14sp" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/ab"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            app:srcCompat="@drawable/settings"
-
+            app:srcCompat="@drawable/academic32"
+            android:layout_marginHorizontal="170dp"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             />
 
         <ImageButton
-            android:id="@+id/imagenotes"
+            android:id="@+id/eb"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            app:srcCompat="@drawable/essay"
-
+            app:srcCompat="@drawable/exam32"
+            android:layout_marginHorizontal="230dp"
             android:layout_marginLeft="160dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             />
 
         <ImageButton
-            android:id="@+id/imagenote"
+            android:id="@+id/fb1"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            app:srcCompat="@drawable/essay"
+            android:layout_marginHorizontal="280dp"
+            app:srcCompat="@drawable/fees32"
 
             android:layout_marginLeft="200dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             />
 
         <ImageButton
-            android:id="@+id/imagenot"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/menubar"
+            android:id="@+id/setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="340dp"
+            app:srcCompat="@drawable/settings"
 
             android:layout_marginLeft="240dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             />
 
         <ProgressBar
@@ -628,6 +630,8 @@
                         />
 
                 </androidx.cardview.widget.CardView>
+
+
 
             </GridLayout>
         </ScrollView>

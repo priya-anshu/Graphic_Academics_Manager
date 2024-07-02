@@ -15,15 +15,17 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Academics"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/black"
         android:textSize="30sp"
-        android:paddingTop="10dp"
+        android:paddingTop="40dp"
         android:textStyle="bold" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/academic">
 
     </ImageView>
@@ -32,7 +34,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="310dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="330dp"
         android:layout_marginLeft="10dp"
         app:cardCornerRadius="25dp"
         >
